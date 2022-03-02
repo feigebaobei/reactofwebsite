@@ -1,0 +1,103 @@
+body {
+    background-color: #f9f9f8;
+  }
+  .App {
+    /* text-align: center; */
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+  
+  .banner {
+    width: 100%;
+  }
+  .buttonTabBox {
+    border-bottom: 1px solid #0099FF;
+    margin: 0 auto;
+    width: 720px;
+    font-size: 18px;
+  }
+  .buttonTab {
+    background-color: #fff;
+    color: #007EFF;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    line-height: 40px;
+  }
+  .buttonActive {
+    background-color: #66B3FF;
+    color: #fff;
+  }
+  
+  .main {
+    padding: 110px 0;
+  }
+  .form {
+    margin: 0 auto;
+    width: 720px;
+  }
+  .formItemBox {
+    padding-top: 10px;
+  }
+  .label {
+    width: 140px;
+    display: inline-block;
+    text-align: right;
+  }
+  .formInput {
+    height: 20px;
+    padding: 2px;
+    width: 220px;
+    border: 1px solid #707070;
+  
+  }
+  .formButtonBox {
+    margin: 0 auto;
+    width: 720px;
+    padding-left: 140px;
+    padding-top: 10px;
+  }
+  .formButton {
+    background-color: blue;
+    background-size: 100%;
+    background-image: url('../../access/button.png');
+    width: 70px;
+    height: 28px;
+    display: inline-block;
+    margin-right: 25px;
+    font-weight: bold;
+    color: #fff;
+    height: 28px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 28px;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .footer {
+    position: relative;
+    background-color: #c1c1c1;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 10px 0 50px 0;
+  }
+  .footerLogo {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    width: 55px;
+    transform: translateY(-50%);
+  }
+  .footerP {
+    margin: 0px;
+    text-align: center;
+  }
+  

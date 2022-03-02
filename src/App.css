@@ -1,3 +1,4 @@
+/* 上线前删除 */
 body {
   background-color: #f9f9f8;
 }
@@ -76,6 +77,8 @@ body {
   vertical-align: middle;
   font-size: 14px;
   line-height: 28px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .footer {
@@ -98,7 +101,8 @@ body {
   margin: 0px;
   text-align: center;
 }
-
+/* 
+上线前删除
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -132,4 +136,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
+} */

@@ -1,0 +1,25 @@
+.box {
+    width: 500px;
+    border: 1px solid #999;
+    padding: 30px;
+    margin: 180px auto 0 auto;
+    border-radius: 30px;
+}
+.title {
+    text-align: center;
+}
+.itemBox {
+    margin: 0 0 12px 0;
+}
+.label {
+    width: 120px;
+    margin-right: 8px;
+}
+.paddingLeft {
+    padding-left: 128px;
+}
+.button {
+    width: 50px;
+    height: 24px;
+    margin-right: 10px;
+}

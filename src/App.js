@@ -32,12 +32,11 @@ let App = () => {
         <AppContext.Provider value={[isLoggedIn, user]}>
           <Routes>
             {routes.map((route, index) => {
-              log('route', route)
               if (route.protected === 'auth') {
                 // for test
                 // if (isLoggedIn) {} else {}
                 return (<Route
-                  exact
+                  exact={route.exact}
                   path={route.path}
                   element={route.component()}
                   key={index}
@@ -45,7 +44,7 @@ let App = () => {
                 </Route>)
               } else {
                 return (<Route
-                  exact
+                  exact={route.exact}
                   path={route.path}
                   element={route.component()}
                   key={index}

@@ -1,6 +1,7 @@
 import Query from '../pages/Query/index.js'
-import Admin from '../pages/Admin/index.js'
+import Login from '../pages/Login/index.js'
 import First from '../pages/First/index.js'
+import Entry from '../pages/Entry/index.js'
 
 let routeList = [
     {
@@ -22,9 +23,21 @@ let routeList = [
         protected: null
     },
     {
-        path: '/admin',
+        path: '/manage/*',
+        exact: false,
+        component: () => <Entry/>,
+        protected: 'auth'
+    },
+    // {
+    //     path: '/manage/index',
+    //     exact: true,
+    //     component: () => <Login/>,
+    //     protected: 'auth'
+    // },
+    {
+        path: '/login',
         exact: true,
-        component: () => <Admin/>,
+        component: () => <Login/>,
         protected: 'auth'
     },
 ]

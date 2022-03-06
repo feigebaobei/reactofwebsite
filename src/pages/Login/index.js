@@ -1,21 +1,59 @@
-// import './index.css'
-let Admin = () => {
+import {useState} from 'react'
+import api from '../../utils/api'
+// import Toast from '../../components/Toast'
+import {
+    Button,
+    message} from 'antd'
+import {
+    useNavigate
+} from 'react-router-dom'
+
+let {log} = console
+
+let Login = () => {
+    // 
+    let navigate = useNavigate()
+    let [submiting, setSubmiting] = useState(false)
+    let submitHandler = (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        setSubmiting(true)
+        // let api
+        api.login({
+            username: 'admin',
+            password: '123456'
+        }).then(res => {
+            if (!res.data.code) {
+                message.info('登录成功')
+                // 已经进入管理页面了，不用设置submiting了
+                navigate('/manage', {replace: true})
+            } else {
+                message.info(res.data.message)
+            }
+        }).catch(err => {
+            log('catch', err)
+            setSubmiting(false)
+                setTimeout(() => {
+            }, 1000)
+        })
+    }
     return (<div className="box">
-        <h1 className="title">上传学员成绩</h1>
-        <form enctype="multipart/form-data">
+        <h1 className="title">管理员登录页面</h1>
+        <form encType="multipart/form-data">
             <div className="itemBox">
-                <label className="label" for="learnNumber">账号</label>
-                <input type="text" name="learnNumber" id="learnNumber" required></input>
+                <label className="label" htmlFor="username">用户名</label>
+                <input type="text" name="username" id="username" required></input>
             </div>
             <div className="itemBox">
-                <label className="label" for="password">密码</label>
+                <label className="label" htmlFor="password">密码</label>
                 <input type="password" name="password" id="password" required></input>
             </div>
             <div className="itemBox paddingLeft">
                 <button className="button" type="reset">重置</button>
-                <button className="button" type="submit">提交</button>
+                {/* <button className="button" type="submit" onClick={submitHandler}>提交</button> */}
+                <Button disabled={submiting} onClick={submitHandler}>提交</Button>
             </div>
         </form>
     </div>)
 }
-export default Admin
+export default Login

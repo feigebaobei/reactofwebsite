@@ -38,7 +38,7 @@ let routeList = [
         path: '/login',
         exact: true,
         component: () => <Login/>,
-        protected: 'auth'
+        protected: 'guest'
     },
 ]
 export default routeList

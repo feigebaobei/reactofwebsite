@@ -1,0 +1,6 @@
+.toastBox {
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    transform: translateY(-50%);
+}

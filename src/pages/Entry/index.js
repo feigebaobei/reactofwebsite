@@ -3,7 +3,7 @@ import api from '../../utils/api'
 import './index.css'
 
 let {log} = console
-let Admin = () => {
+let Entry = () => {
     let [learnNumber, setLearnNumber] = useState('')
     let [levelCert, setlevelCert] = useState('')
     let submitHandler = (e) => {
@@ -44,4 +44,4 @@ let Admin = () => {
         </form>
     </div>)
 }
-export default Admin
+export default Entry

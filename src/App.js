@@ -20,6 +20,7 @@ let App = () => {
   let [isLoading, setIsLoading] = useState(true)
   
   useEffect(() => {
+    log('useEffect', isLoggedIn)
     setIsLoading(false)
     // 获取用户信息
   }, [])
@@ -34,14 +35,21 @@ let App = () => {
             {routes.map((route, index) => {
               if (route.protected === 'auth') {
                 // for test
-                // if (isLoggedIn) {} else {}
-                return (<Route
-                  exact={route.exact}
-                  path={route.path}
-                  element={route.component()}
-                  key={index}
-                >
-                </Route>)
+                if (isLoggedIn) {
+                  return (<Route
+                    exact={route.exact}
+                    path={route.path}
+                    element={route.component()}
+                    key={index}
+                  ></Route>)
+                } else {
+                  return (<Route
+                    exact
+                    path={route.path}
+                    element={<Navigate to="/login" replace={true} />}
+                    key={index}
+                    ></Route>)
+                }
               } else {
                 return (<Route
                   exact={route.exact}

@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { useNavigate } from "react-router-dom"
 // import qs from 'qs'
 // import router from '@/router/index'
 // import store from '@/vuex/index.js'
@@ -32,13 +31,7 @@ let instance = (opt) => {
     switch (error.response.status) {
       case 401:
         err = {error: '', message: 'no login'}
-        // 进入登录页面
-        // router.push({
-        //   path: '/login'
-        // })xxx
-        console.log('replace');
-        let navigate = useNavigate()
-        navigate('/', {replace: true})
+        window.location.replace(window.location.origin + '/login')
         break
       case 403:
         // err = {error: '', message: 'no login'}
@@ -68,6 +61,10 @@ const obj = {
     // console.log
     return instance(opt).post('/students', params)
   },
+  login: (params, opt = {}) => {
+    // return instance(opt).get('/users/login', {params})
+    return instance(opt).post('/users/login', params)
+  }
 }
 
 export default obj

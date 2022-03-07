@@ -7,13 +7,20 @@ import {
 import {
     useNavigate
 } from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+import {token} from '../../store/actions'
 
 let {log} = console
 
+let saveTokenToSession = (token) => {
+    sessionStorage.setItem('token', token)
+}
+
 let Login = () => {
-    // 
     let navigate = useNavigate()
     let [submiting, setSubmiting] = useState(false)
+    let dispatch = useDispatch()
+
     let submitHandler = (e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -25,6 +32,8 @@ let Login = () => {
         }).then(res => {
             if (!res.data.code) {
                 message.info('登录成功')
+                dispatch(token(res.data.token))
+                saveTokenToSession(res.data.token)
                 // 已经进入管理页面了，不用设置submiting了
                 navigate('/manage', {replace: true})
             } else {
@@ -32,11 +41,16 @@ let Login = () => {
             }
         }).catch(err => {
             log('catch', err)
+            // for test
+            let t = 'tokenForTest'
+            dispatch(token(t))
+            saveTokenToSession(t)
             setSubmiting(false)
                 setTimeout(() => {
             }, 1000)
         })
     }
+
     return (<div className="box">
         <h1 className="title">管理员登录页面</h1>
         <form encType="multipart/form-data">

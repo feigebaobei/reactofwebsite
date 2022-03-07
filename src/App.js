@@ -9,18 +9,33 @@ import {
   Navigate
 } from 'react-router-dom'
 import routes from './routes/index'
+import {
+  // increment,
+  // decrement,
+  token as tokenAction
+} from './store/actions'
+import { useSelector, useDispatch
+} from 'react-redux'
 // import { use } from '../../ws-end/routes/students';
 // import NotFound from './pages/NotFound'
 
 let {log} = console // for test
 
 let App = () => {
-  let [isLoggedIn, setIsLoggedIn] = useState(false)
-  let [user, setUser] = useState({})
+  // let [isLoggedIn, setIsLoggedIn] = useState(false)
+  // let [user, setUser] = useState({})
   let [isLoading, setIsLoading] = useState(true)
+  let dispatch = useDispatch()
+
+  let token = useSelector(state => state.token)
+  let tokenFromSession = sessionStorage.getItem('token')
+  if (tokenFromSession) {
+    dispatch(tokenAction(tokenFromSession))
+  }
+  log('token', tokenFromSession)
   
   useEffect(() => {
-    log('useEffect', isLoggedIn)
+    // log('useEffect', isLoggedIn)
     setIsLoading(false)
     // 获取用户信息
   }, [])
@@ -30,12 +45,10 @@ let App = () => {
   } else {
     return (
       <div>
-        <AppContext.Provider value={[isLoggedIn, user]}>
           <Routes>
             {routes.map((route, index) => {
               if (route.protected === 'auth') {
-                // for test
-                if (isLoggedIn) {
+                if (token) {
                   return (<Route
                     exact={route.exact}
                     path={route.path}
@@ -61,7 +74,8 @@ let App = () => {
             })}
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
-        </AppContext.Provider>
+        {/* <AppContext.Provider value={[isLoggedIn, user]}>
+        </AppContext.Provider> */}
       </div>
     )
   }

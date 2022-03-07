@@ -1,4 +1,5 @@
 import Query from '../pages/Query/index.js'
+import LevelCert from '../pages/Query/LevelCert'
 import Login from '../pages/Login/index.js'
 import First from '../pages/First/index.js'
 import Entry from '../pages/Entry/index.js'
@@ -11,9 +12,9 @@ let routeList = [
         protected: null
     },
     {
-        path: '/q',
+        path: '/levelCert',
         exact: true,
-        component: () => <Query/>,
+        component: () => <LevelCert/>,
         protected: null
     },
     {

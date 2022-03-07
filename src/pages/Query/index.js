@@ -1,5 +1,7 @@
 import './index.css';
-import {useState} from 'react'
+import {useState,
+  useRef
+} from 'react'
 import api from '../../utils/api'
 
 let buttonList = [
@@ -12,10 +14,12 @@ let buttonList = [
 ]
 
 let {log} = console // for test
-function App() {
+function Query() {
   let [buttonActive, setButtonActive] = useState('10')
-  let [number, setNumber] = useState('')
-  let [name, setName] = useState('')
+  let [number, setNumber] = useState('23')
+  let [name, setName] = useState('xm')
+  let nameRef = useRef()
+  let numberRef = useRef()
 
 
   let buttonActiveHandler = (v) => {
@@ -38,12 +42,18 @@ function App() {
     // e.preventDefault()
     e.stopPropagation()
     // log('resetClickHandler')
-    // setName('')
+    setName('')
+    setNumber('')
+    nameRef.current.value = ''
+    numberRef.current.value = ''
   }
   let numberInputHandler = (e) => {
     e.preventDefault()
     e.stopPropagation()
     setNumber(e.target.value)
+  }
+  let nameChangeHandler = (e) => {
+    setName(e.target.value)
   }
 
   return (
@@ -63,11 +73,19 @@ function App() {
           <div className="formContBox">
             <div className="formItemBox">
               <label className="label">姓名（name）：</label>
-              <input className="formInput" type="text" name="name" id="name" required defaultValue={name} />
+              <input className="formInput" type="text" name="name" id="name" 
+                ref={nameRef}
+                required 
+                onChange={nameChangeHandler}
+                defaultValue={name} />
             </div>
             <div className="formItemBox">
               <label className="label">证书编号（NO.）：</label>
-              <input className="formInput" type="text" name="cardId" id="cardId" required defaultValue={number} onInput={numberInputHandler} />
+              <input className="formInput" type="text" name="cardId" id="cardId" 
+              required 
+              ref={numberRef}
+              defaultValue={number} 
+              onInput={numberInputHandler} />
               <span>（或输入身份证号）</span>
             </div>
           </div>
@@ -87,4 +105,4 @@ function App() {
   );
 }
 
-export default App;
+export default Query;

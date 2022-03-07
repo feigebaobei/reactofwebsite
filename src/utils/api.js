@@ -64,6 +64,9 @@ const obj = {
   login: (params, opt = {}) => {
     // return instance(opt).get('/users/login', {params})
     return instance(opt).post('/users/login', params)
+  },
+  getLevelCert: (params, opt = {}) => {
+    return instance(opt).get('/students/levelCert', {params})
   }
 }
 

@@ -1,6 +1,6 @@
-// import logo from './logo.svg';
 import './index.css';
 import {useState} from 'react'
+import api from '../../utils/api'
 
 let buttonList = [
   { label: '级位证', value: '10'},
@@ -14,6 +14,10 @@ let buttonList = [
 let {log} = console // for test
 function App() {
   let [buttonActive, setButtonActive] = useState('10')
+  let [number, setNumber] = useState('')
+  let [name, setName] = useState('')
+
+
   let buttonActiveHandler = (v) => {
     setButtonActive(v)
   }
@@ -21,12 +25,27 @@ function App() {
     e.preventDefault()
     e.stopPropagation()
     log('queryClickHandler')
+    api.getLevelCert({
+      // idCardOrName => idCardOrCertNumber
+      idCardOrCertNumber: number
+    }).then(res => {
+      log('then', res)
+    }).catch(err => {
+      log('catch', err)
+    })
   }
   let resetClickHandler = (e) => {
+    // e.preventDefault()
+    e.stopPropagation()
+    // log('resetClickHandler')
+    // setName('')
+  }
+  let numberInputHandler = (e) => {
     e.preventDefault()
     e.stopPropagation()
-    log('resetClickHandler')
+    setNumber(e.target.value)
   }
+
   return (
     <div className="App">
       <img src={require('../../access/banner.jpg')} className="banner" alt="banner" />
@@ -44,11 +63,11 @@ function App() {
           <div className="formContBox">
             <div className="formItemBox">
               <label className="label">姓名（name）：</label>
-              <input className="formInput" type="text" name="name" id="name" required />
+              <input className="formInput" type="text" name="name" id="name" required defaultValue={name} />
             </div>
             <div className="formItemBox">
               <label className="label">证书编号（NO.）：</label>
-              <input className="formInput" type="text" name="cardId" id="cardId" required />
+              <input className="formInput" type="text" name="cardId" id="cardId" required defaultValue={number} onInput={numberInputHandler} />
               <span>（或输入身份证号）</span>
             </div>
           </div>
@@ -64,20 +83,6 @@ function App() {
         <p className="footerP">中国最权威的武术证书认证官网-中国武术协会证书认证中心</p>
         <p className="footerP">提供段位查询、级位查询、教练查询等武术类相关的证书查询服务，并提供国内外及协会相关新闻资讯</p>
       </footer>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }

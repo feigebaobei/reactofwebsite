@@ -1,6 +1,5 @@
 // import './App.css';
 import {useEffect, useState} from 'react'
-import AppContext from './store/AppContext'
 import Loading from './components/Loading'
 import NotFound from './components/NotFound'
 import {
@@ -22,8 +21,6 @@ import { useSelector, useDispatch
 let {log} = console // for test
 
 let App = () => {
-  // let [isLoggedIn, setIsLoggedIn] = useState(false)
-  // let [user, setUser] = useState({})
   let [isLoading, setIsLoading] = useState(true)
   let dispatch = useDispatch()
 
@@ -74,13 +71,8 @@ let App = () => {
             })}
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
-        {/* <AppContext.Provider value={[isLoggedIn, user]}>
-        </AppContext.Provider> */}
       </div>
     )
   }
-  // return (<div>
-  //     app
-  // </div>)
 }
 export default App

@@ -16,9 +16,16 @@ let token = (nr = '') => {
         payload: nr
     }
 }
+let levelCertUrl = (nr = '') => {
+    return {
+        type: 'resetLevelCertUrl',
+        payload: nr
+    }
+}
 
 export {
     increment,
     decrement,
-    token
+    token,
+    levelCertUrl
 }

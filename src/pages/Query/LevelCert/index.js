@@ -1,12 +1,15 @@
 import './index.css';
-import {useState} from 'react'
+// import {useState} from 'react'
 import Footer from '../../../components/Footer'
+import {useSelector} from 'react-redux'
 
 let {log} = console // for test
 
 function LevelCert() {
   // let [levelCertUrl, setLevelCertUrl] = useState('//localhost:4000/images/third164654178193118342.jpeg')
-  let [levelCertUrl, setLevelCertUrl] = useState('')
+  // let [levelCertUrl, setLevelCertUrl] = useState('')
+  let levelCertUrl = useSelector(state => state.levelCertUrl)
+
   
   return (
     <section className='levelCertBox'>

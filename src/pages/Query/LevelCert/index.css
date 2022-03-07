@@ -1,0 +1,35 @@
+.levelCertBox {
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+
+.bannerImg {
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.path {
+    color: grey;
+}
+.pathItem {
+    color: #2a2a2a;
+}
+.homePage {
+    cursor: pointer;
+}
+.homePage:hover {
+    color: #f60;
+}
+
+.hasPic {
+    text-align: center;
+}
+
+.noPic {
+    padding: 100px;
+    text-align: center;
+}

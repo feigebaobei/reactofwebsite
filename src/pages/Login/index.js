@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import api from '../../utils/api'
 // import Toast from '../../components/Toast'
 import {
@@ -20,20 +20,26 @@ let Login = () => {
     let navigate = useNavigate()
     let [submiting, setSubmiting] = useState(false)
     let dispatch = useDispatch()
+    let usernameRef = useRef()
+    let passwordRef = useRef()
 
     let submitHandler = (e) => {
         e.stopPropagation();
         e.preventDefault();
         setSubmiting(true)
-        // let api
+
         api.login({
-            username: 'admin',
-            password: '123456'
+            username: usernameRef.current.value,
+            password: passwordRef.current.value,
         }).then(res => {
+            // log(res)
             if (!res.data.code) {
                 message.info('登录成功')
-                dispatch(token(res.data.token))
-                saveTokenToSession(res.data.token)
+                if (!res.data.data.token) {
+                    return new Error('token不存在')
+                }
+                saveTokenToSession(res.data.data.token)
+                dispatch(token(res.data.data.token))
                 // 已经进入管理页面了，不用设置submiting了
                 navigate('/manage', {replace: true})
             } else {
@@ -41,14 +47,16 @@ let Login = () => {
             }
         }).catch(err => {
             log('catch', err)
-            // for test
-            let t = 'tokenForTest'
-            dispatch(token(t))
-            saveTokenToSession(t)
-            setSubmiting(false)
-                setTimeout(() => {
-            }, 1000)
+            setTimeout(() => {
+                setSubmiting(false)
+            }, 100)
         })
+    }
+    let resetHandler = (e) => {
+        e.preventDefault()
+        e.stopPropagation()
+        usernameRef.current.value = ''
+        passwordRef.current.value = ''
     }
 
     return (<div className="box">
@@ -56,15 +64,18 @@ let Login = () => {
         <form encType="multipart/form-data">
             <div className="itemBox">
                 <label className="label" htmlFor="username">用户名</label>
-                <input type="text" name="username" id="username" required></input>
+                <input type="text" 
+                ref={usernameRef}
+                name="username" id="username" required></input>
             </div>
             <div className="itemBox">
                 <label className="label" htmlFor="password">密码</label>
-                <input type="password" name="password" id="password" required></input>
+                <input type="password"
+                    ref={passwordRef}
+                 name="password" id="password" required></input>
             </div>
             <div className="itemBox paddingLeft">
-                <button className="button" type="reset">重置</button>
-                {/* <button className="button" type="submit" onClick={submitHandler}>提交</button> */}
+                <Button  style={{marginRight: '10px'}} onClick={resetHandler}>重置</Button>
                 <Button disabled={submiting} onClick={submitHandler}>提交</Button>
             </div>
         </form>

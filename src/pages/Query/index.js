@@ -8,6 +8,11 @@ import {useDispatch} from 'react-redux'
 import {levelCertUrl} from '../../store/actions'
 import {useNavigate} from 'react-router-dom'
 
+import {
+  // Button,
+  message
+} from 'antd'
+
 let buttonList = [
   { label: '级位证', value: '10'},
   { label: '会员证', value: '20'},
@@ -42,9 +47,15 @@ function Query() {
       // log('then', res)
       // 在store中保存levelCertUrl
       // dispatch(token(res.data.token))
-      dispatch(levelCertUrl(res.data.levelCertUrl))
-      dispatch(levelCertUrl('//localhost:4000/images/third164654178193118342.jpeg'))
-      navigate('/levelCert')
+      if (!res.data.code) {
+        dispatch(levelCertUrl(`//localhost:4000/${res.data.data}`))
+        navigate('/levelCert')
+      } else {
+        message.error(res.data.message)
+      }
+      // dispatch(levelCertUrl(`//localhost:4000/${res.data.data[0].levelCertUrl}`))
+      // // dispatch(levelCertUrl('//localhost:4000/images/third164654178193118342.jpeg'))
+      // navigate('/levelCert')
     }).catch(err => {
       log('catch', err)
       // dispatch(levelCertUrl('//localhost:4000/images/third164654178193118342.jpeg'))

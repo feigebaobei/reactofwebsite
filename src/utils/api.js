@@ -57,9 +57,9 @@ const obj = {
 //   dishTest: params => {
 //     return instance.post('dish/test', params)
 //   },
-  payOrder: (params, opt = {}) => {
+  postLevelCert: (params, opt = {}) => {
     // console.log
-    return instance(opt).post('/students', params)
+    return instance(opt).post('/students/levelCert', params)
   },
   login: (params, opt = {}) => {
     // return instance(opt).get('/users/login', {params})

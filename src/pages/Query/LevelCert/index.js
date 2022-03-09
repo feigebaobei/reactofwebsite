@@ -19,7 +19,7 @@ function LevelCert() {
         </p>
         {levelCertUrl ? 
         <article className="hasPic">
-          <img src={levelCertUrl} alt="证书图片" />
+          <img src={levelCertUrl} alt="证书图片" className="hasPicImg" />
         </article> :
         <article className="noPic">
           <p>暂无资料！</p>

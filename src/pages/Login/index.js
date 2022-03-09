@@ -44,6 +44,7 @@ let Login = () => {
                 navigate('/manage', {replace: true})
             } else {
                 message.info(res.data.message)
+                setSubmiting(false)
             }
         }).catch(err => {
             log('catch', err)

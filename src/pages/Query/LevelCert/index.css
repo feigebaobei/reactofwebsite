@@ -3,14 +3,11 @@
     margin: 0 auto;
 }
 
-
-
 .bannerImg {
     width: auto;
     margin: 0 auto;
     display: block;
 }
-
 
 .path {
     color: grey;
@@ -27,6 +24,9 @@
 
 .hasPic {
     text-align: center;
+}
+.hasPicImg {
+    width: 100%;
 }
 
 .noPic {

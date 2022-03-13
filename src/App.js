@@ -18,8 +18,6 @@ import { useSelector, useDispatch
 // import { use } from '../../ws-end/routes/students';
 // import NotFound from './pages/NotFound'
 
-let {log} = console // for test
-
 let App = () => {
   let [isLoading, setIsLoading] = useState(true)
   let dispatch = useDispatch()
@@ -29,7 +27,7 @@ let App = () => {
   if (tokenFromSession) {
     dispatch(tokenAction(tokenFromSession))
   }
-  log('token', tokenFromSession)
+  // log('token', tokenFromSession)
   
   useEffect(() => {
     // log('useEffect', isLoggedIn)

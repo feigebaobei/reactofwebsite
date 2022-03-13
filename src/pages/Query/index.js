@@ -7,6 +7,7 @@ import Footer from '../../components/Footer'
 import {useDispatch} from 'react-redux'
 import {levelCertUrl} from '../../store/actions'
 import {useNavigate} from 'react-router-dom'
+import config from '../../config'
 
 import {
   // Button,
@@ -22,7 +23,8 @@ let buttonList = [
   { label: '考评员资格', value: '60'},
 ]
 
-let {log} = console // for test
+let {log} = console
+
 function Query() {
   let [buttonActive, setButtonActive] = useState('10')
   let [number, setNumber] = useState('')
@@ -39,7 +41,7 @@ function Query() {
   let queryClickHandler = (e) => {
     e.preventDefault()
     e.stopPropagation()
-    log('queryClickHandler')
+    // log('queryClickHandler')
     api.getLevelCert({
       // idCardOrName => idCardOrCertNumber
       idCardOrCertNumber: number
@@ -48,17 +50,13 @@ function Query() {
       // 在store中保存levelCertUrl
       // dispatch(token(res.data.token))
       if (!res.data.code) {
-        dispatch(levelCertUrl(`//localhost:4000/${res.data.data}`))
+        dispatch(levelCertUrl(`//${config.serveHost}:${config.servePort}/${res.data.data}`))
         navigate('/levelCert')
       } else {
         message.error(res.data.message)
       }
-      // dispatch(levelCertUrl(`//localhost:4000/${res.data.data[0].levelCertUrl}`))
-      // // dispatch(levelCertUrl('//localhost:4000/images/third164654178193118342.jpeg'))
-      // navigate('/levelCert')
     }).catch(err => {
       log('catch', err)
-      // dispatch(levelCertUrl('//localhost:4000/images/third164654178193118342.jpeg'))
     })
   }
   let resetClickHandler = (e) => {

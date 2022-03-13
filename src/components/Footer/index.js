@@ -4,8 +4,6 @@ import './index.css';
 // } from 'react'
 // import api from '../../utils/api'
 
-
-let {log} = console // for test
 function Footer() {
 
   return (

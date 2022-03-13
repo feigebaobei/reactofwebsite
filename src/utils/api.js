@@ -2,9 +2,11 @@ import axios from 'axios'
 // import qs from 'qs'
 // import router from '@/router/index'
 // import store from '@/vuex/index.js'
+import config from '../config'
 
 let option = {
-  baseURL: 'http://localhost:4000/',
+  // baseURL: 'http://localhost:4000/',
+  baseURL: `http://${config.serveHost}:${config.servePort}/`,
   timeout: 5000,
   headers: {
     // Authorization: `bearer ${store.state.user.token}`

@@ -1,10 +1,13 @@
-import './index.css';
+import styles from './index.module.css';
+let {log} = console;
+
+log('styles', styles)
 
 let Home = () => {
-    return (<main className="main">
+    return (<main className={styles.main}>
         {/* header */}
         <header>
-            <img src={require('../../access/banner.jpg')} className="headerImg" alt="img" />
+            <img src={require('../../access/index_r1_c1.jpeg')} className="headerImg" alt="img" />
         </header>
         {/* banner */}
         <div className="banner"></div>

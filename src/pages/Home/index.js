@@ -285,6 +285,162 @@ let Home = () => {
             </section>
         </section>
         {/* second */}
+        <section className={[`${styles.firstBox}`]}>
+            <article className={[`${styles.notice}  ${styles.bordered}`]}>
+                <header className={styles.header}>
+                    <div className={styles.headerLeft}>
+                        <span className={styles.block}></span>
+                        <span className={styles.name}>武林精英</span>
+                        <span className={styles.grey}>Member center</span>
+                    </div>
+                    <div className={styles.headerRight}>
+                        <span className={styles.more}>+更多>></span>
+                    </div>
+                </header>
+                <section className={styles.newsContainer}>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>孙加记</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>乔红亮</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                </section>
+            </article>
+            <article className={[`${styles.news}  ${styles.bordered}`]}>
+                <header className={styles.header}>
+                    <div className={styles.headerLeft}>
+                        <span className={styles.block}></span>
+                        <span className={styles.name}>名家论拳</span>
+                        <span className={styles.grey}>Activity reports</span>
+                    </div>
+                    <div className={styles.headerRight}>
+                        <span className={styles.more}>+更多>></span>
+                    </div>
+                </header>
+                <section className={styles.newsContainer}>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>究竟什么是抻筋拔骨，古拳谱里的描述或许并不准确</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>形意拳穿透力杀伤力、劲从足下生的秘密</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>形意拳技击训练功法－－搓手</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>武术界人士齐聚北京研讨“武术与健康”</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>武德——武术品德</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>形意拳拳名之创立与传播</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>周伟良谈传统武术的传承方式</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                </section>
+            </article>
+            <article className={[`${styles.links}  ${styles.bordered}`]}>
+                <header className={styles.header}>
+                    <div className={styles.headerLeft}>
+                        <span className={styles.block}></span>
+                        <span className={styles.name}>活动报道</span>
+                        <span className={styles.grey}>Activity reports</span>
+                    </div>
+                    <div className={styles.headerRight}>
+                        <span className={styles.more}>+更多>></span>
+                    </div>
+                </header>
+                <section className={styles.newsContainer}>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>2019年全国武术散打冠军赛在渝开幕</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>回顾 | 第八届世界传统武术锦标赛圆满落…</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>2019峨眉山世传赛蓄势待发 运动员热身…</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>6月16日竞赛预告 | 第八届世界传统武…</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>2019年全国青年武术散打锦标赛荣昌开赛</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>下一站，上海！2019世界武术锦标赛宣传…</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                    <p className={styles.newsP}>
+                        <span className={styles.newsPLeft}>
+                            <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                            <span className={styles.containerLinks}>太极拳进机关”公益活动助力活力机关建设</span>
+                        </span>
+                        <span>08-21</span>
+                    </p>
+                </section>
+            </article>
+        </section>
         {/* widget */}
         {/* 友情链接 不要 */}
         {/* footer */}

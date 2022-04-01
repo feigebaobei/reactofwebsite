@@ -81,3 +81,78 @@
     width: 440px;
     padding: 10px;
 }
+
+
+.imgScrollBoxBox {
+    /* position: relative; */
+    overflow: hidden;
+}
+.imgScrollBox {
+    -webkit-animation: myfirst 15s; /* Safari Chrome opera */
+    -ms-animation: myfirst 15s; /* ie */
+    -moz-animation: myfirst 15s; /* ff */
+    animation: myfirst 15s;
+    width: 3200px;
+    text-align: right;
+    /* transform: translateX(-2100px); */
+    animation-play-state: running;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.imgScrollBox:hover {
+    animation-play-state: paused;
+}
+@-webkit-keyframes myfirst /* Safari Chrome opera */
+{
+    /* 0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    100% {background: green;} */
+    0% {
+        transform: translateX(-2100px);
+    }
+    100% {
+        transform: translateX(-540px);
+    }
+}
+@-ms-keyframes myfirst /* ie */
+{
+    0% {
+        transform: translateX(-2100px);
+    }
+    100% {
+        transform: translateX(-540px);
+    }
+}
+@-moz-keyframes myfirst /* ff */
+{
+    0% {
+        transform: translateX(-2100px);
+    }
+    100% {
+        transform: translateX(-540px);
+    }
+}
+@keyframes myfirst
+{
+    0% {
+        transform: translateX(-2100px);
+    }
+    100% {
+        transform: translateX(-540px);
+    }
+}
+.imgBox {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px;
+    width: 150px;
+    height: 110px;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.mingjiaPic {
+    width: 100%;
+    height: 100%;
+}

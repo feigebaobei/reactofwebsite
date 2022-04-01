@@ -206,6 +206,84 @@ let Home = () => {
             </article>
         </section>
         {/* 当代名家 */}
+        <section className={styles.mingjia}>
+            <header className={styles.header}>
+                <div className={styles.headerLeft}>
+                    <span className={styles.block}></span>
+                    <span className={styles.name}>当代名家</span>
+                    <span className={styles.grey}>History famous</span>
+                </div>
+                <div className={styles.headerRight}>
+                    <span className={styles.more}>+更多>></span>
+                </div>
+            </header>
+            <section className={styles.imgScrollBoxBox}>
+                <div className={styles.imgScrollBox}>
+                    {/* 需要设置链接 */}
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821112124202420.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821112052295229.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821111986628662.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821111737403740.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104622262226.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104550055005.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/2019082110440632632.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104377717771.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104287898789.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104078787878.jpeg')} alt="" />
+                    </div>
+
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821112124202420.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821112052295229.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821111986628662.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821111737403740.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104622262226.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104550055005.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/2019082110440632632.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104377717771.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104287898789.jpeg')} alt="" />
+                    </div>
+                    <div className={styles.imgBox}>
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821104078787878.jpeg')} alt="" />
+                    </div>
+                </div>
+            </section>
+        </section>
         {/* second */}
         {/* widget */}
         {/* 友情链接 不要 */}

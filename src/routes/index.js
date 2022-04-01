@@ -1,3 +1,4 @@
+import Home from '../pages/Home/index.js'
 import Query from '../pages/Query/index.js'
 import LevelCert from '../pages/Query/LevelCert'
 import Login from '../pages/Login/index.js'
@@ -7,6 +8,12 @@ import Entry from '../pages/Entry/index.js'
 let routeList = [
     {
         path: '/',
+        exact: true,
+        component: () => <Home/>,
+        protected: null
+    },
+    {
+        path: '/query',
         exact: true,
         component: () => <Query/>,
         protected: null

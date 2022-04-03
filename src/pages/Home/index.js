@@ -425,7 +425,7 @@ let Home = () => {
                 </header>
                 <section className="imgScrollBoxBox">
                     {/* <div className={stylesAnimation.widgetScrollBox}> */}
-                <div className='widgetScrollBox'>
+                    <div className='widgetScrollBox'>
                         {/* 需要设置链接 */}
                         <div className="imgBox">
                             <img className="mingjiaPic" src={require('../../access/20190821114713961396.jpeg')} alt="" />
@@ -485,7 +485,33 @@ let Home = () => {
                     </div>
                 </section>
             </section>
-            {/* 友情链接 不要 */}
+            {/* 友情链接 不做链接 */}
+            <section className="friend-link bordered">
+                <header className="header">
+                    <div className="headerLeft">
+                        <span className="block"></span>
+                        <span className="name">友情链接</span>
+                        <span className="grey">Link</span>
+                    </div>
+                    <div className="headerRight">
+                        <span className="more">+更多>></span>
+                    </div>
+                    {/* 国家体育总局官网    中华全国体育总会官网    国际武术联合会 */}
+                </header>
+                <section className="container">
+                    <p>
+                        <span className="newsPLeft">
+                            <span className="containerLinks">国家体育总局官网</span>
+                        </span>
+                        <span className="newsPLeft">
+                            <span className="containerLinks">中华全国体育总会官网</span>
+                        </span>
+                        <span className="newsPLeft">
+                            <span className="containerLinks">国际武术联合会</span>
+                        </span>
+                    </p>
+                </section>
+            </section>
             {/* footer */}
             <footer className="homefooter">
                 <p>版权所有  COPYRIGHT  2005-2019 武术段位推广中心</p>

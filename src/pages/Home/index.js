@@ -1,7 +1,12 @@
 import styles from './index.module.css';
+// import stylesAnimation from './widgetScrollBox.less'
+// import stylesScss from './first.scss';
+import './first.scss';
+
 let {log} = console;
 
 log('styles', styles)
+// log('stylesScss', stylesScss)
 
 let Home = () => {
     return (
@@ -442,8 +447,86 @@ let Home = () => {
             </article>
         </section>
         {/* widget */}
+        <section className={styles.mingjia}>
+            <header className={styles.header}>
+                <div className={styles.headerLeft}>
+                    <span className={styles.block}></span>
+                    <span className={styles.name}>徽章展示</span>
+                    <span className={styles.grey}>badge display</span>
+                </div>
+                <div className={styles.headerRight}>
+                    <span className={styles.more}>+更多>></span>
+                </div>
+            </header>
+            <section className={styles.imgScrollBoxBox}>
+                {/* <div className={stylesAnimation.widgetScrollBox}> */}
+            <div className='widgetScrollBox'>
+                    {/* 需要设置链接 */}
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114713961396.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114820142014.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114713711371.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/2019082111480282282.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114875897589.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114842884288.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114880428042.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/2019082111490719719.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114990179017.jpeg')} alt="" />
+                    </div>
+
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114713961396.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114820142014.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114713711371.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/2019082111480282282.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114875897589.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114842884288.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114880428042.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/2019082111490719719.jpeg')} alt="" />
+                    </div>
+                    <div className="imgBox">
+                        <img className={styles.mingjiaPic} src={require('../../access/20190821114990179017.jpeg')} alt="" />
+                    </div>
+                </div>
+            </section>
+        </section>
         {/* 友情链接 不要 */}
         {/* footer */}
+        <footer className="homefooter">
+            <p>版权所有  COPYRIGHT  2005-2019 武术段位推广中心</p>
+            <p>中国最权威的武术证书认证官网-中国武术协会证书认证中心</p>
+            <p>提供段位查询、级位查询、教练查询等武术类相关的证书查询服务，并提供国内外及协会相关新闻资讯</p>
+        </footer>
     </main>
     </div>)
 }

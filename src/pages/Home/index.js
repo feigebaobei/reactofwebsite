@@ -4,7 +4,7 @@
 import './first.scss';
 import {useNavigate} from 'react-router-dom'
 
-let {log} = console;
+// let {log} = console;
 
 // log('styles', styles)
 // log('stylesScss', stylesScss)

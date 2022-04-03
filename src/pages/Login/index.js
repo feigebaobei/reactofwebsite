@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import {token} from '../../store/actions'
+import './index.scss'
 
 let {log} = console
 

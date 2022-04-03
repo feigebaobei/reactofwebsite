@@ -1,4 +1,4 @@
-import './index.css';
+// import './index.css';
 import {useState,
   useRef
 } from 'react'
@@ -8,6 +8,7 @@ import {useDispatch} from 'react-redux'
 import {levelCertUrl} from '../../store/actions'
 import {useNavigate} from 'react-router-dom'
 import config from '../../config'
+import './index.scss'
 
 import {
   // Button,

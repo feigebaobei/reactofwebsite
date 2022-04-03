@@ -1,0 +1,63 @@
+.box {
+    width: 500px;
+    border: 1px solid #999;
+    padding: 30px;
+    margin: 180px auto 0 auto;
+    border-radius: 30px;
+}
+.title {
+    text-align: center;
+}
+.itemBox {
+    margin: 0 0 12px 0;
+}
+.label {
+    width: 120px;
+    margin-right: 8px;
+}
+.paddingLeft {
+    padding-left: 128px;
+}
+.button {
+    width: 50px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+.label {
+    width: 140px;
+    display: inline-block;
+    text-align: right;
+    }
+    .formInput {
+    height: 20px;
+    padding: 2px;
+    width: 220px;
+    border: 1px solid #707070;
+
+    }
+    .formButtonBox {
+    margin: 0 auto;
+    width: 720px;
+    padding-left: 140px;
+    padding-top: 10px;
+    }
+    .formButton {
+    background-color: blue;
+    background-size: 100%;
+    background-image: url('./access/button.png');
+    width: 70px;
+    height: 28px;
+    display: inline-block;
+    margin-right: 25px;
+    font-weight: bold;
+    color: #fff;
+    height: 28px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 28px;
+    user-select: none;
+    cursor: pointer;
+    }

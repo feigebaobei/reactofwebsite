@@ -21,25 +21,32 @@
         display: flex;
         .notice {
             width: 300px;
+            margin: 5px 0;
             margin-right: 8px;
             padding: 10px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            /* align-items: center; */
-        }
-        .headerLeft {
-            display: flex;
-            align-items: center;
-        }
-        .headerRight {}
-        .block {
-            display: inline-block;
-            background-color: red;
-            width:4px;
-            height: 100%;
-            margin-right: 8px;
+            .header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 4px;
+                /* align-items: center; */
+                .headerLeft {
+                    display: flex;
+                    align-items: center;
+                }
+                .headerRight {}
+                .block {
+                    display: inline-block;
+                    background-color: red;
+                    width:4px;
+                    height: 100%;
+                    margin-right: 8px;
+                }
+                .grey {
+                    color: gray;
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
         }
         .newsContainer{
             font-size: 12px;
@@ -64,20 +71,41 @@
             color: red;
             font-weight: 600;
         }
-        .grey {
-            color: gray;
-            margin-left: 10px;
-        }
         .news {
             /* width: 440px; */
             flex-basis: 50%;
             flex-grow: 1;
+            margin: 5px 0;
             margin-right: 8px;
             padding: 10px;
+            .header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 4px;
+                /* align-items: center; */
+                .headerLeft {
+                    display: flex;
+                    align-items: center;
+                }
+                .headerRight {}
+                .block {
+                    display: inline-block;
+                    background-color: red;
+                    width:4px;
+                    height: 100%;
+                    margin-right: 8px;
+                }
+                .grey {
+                    color: gray;
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
         }
         .links {
             width: 440px;
             padding: 10px;
+            margin: 5px 0;
             .newsContainer {
                 display: flex;
                 img {}
@@ -99,13 +127,63 @@
                 }
             }
         }
+        .active {
+            width: 440px;
+            padding: 10px;
+            margin: 5px 0;
+            .header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 4px;
+                /* align-items: center; */
+                .headerLeft {
+                    display: flex;
+                    align-items: center;
+                }
+                .headerRight {}
+                .block {
+                    display: inline-block;
+                    background-color: red;
+                    width:4px;
+                    height: 100%;
+                    margin-right: 8px;
+                }
+                .grey {
+                    color: gray;
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
     }
+    .mingjia {
+        padding: 10px;
+        margin: 5px 0;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            /* align-items: center; */
+            .headerLeft {
+                display: flex;
+                align-items: center;
+            }
+            .headerRight {}
+            .block {
+                display: inline-block;
+                background-color: red;
+                width:4px;
+                height: 100%;
+                margin-right: 8px;
+            }
+            .grey {
+                color: gray;
+                margin-left: 10px;
+                font-size: 12px;
+            }
+        }
 
-
-
-
-
-
+    }
 
     .imgScrollBoxBox {
         /* position: relative; */
@@ -203,7 +281,9 @@
             cursor: pointer;
         }
     }
-
+    .widgetScrollBox:hover {
+        animation-play-state: paused;
+    }
     @-webkit-keyframes widgetAnimate /* Safari Chrome opera */
     {
         /* 0%   {background: red;}

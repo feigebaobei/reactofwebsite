@@ -147,7 +147,7 @@ let Home = () => {
                     </section>
                 </article>
                 <article className="links bordered">
-                    <header className="header">
+                    {/* <header className="header">
                         <div className="headerLeft">
                             <span className="block"></span>
                             <span className="name">通知公告</span>
@@ -156,7 +156,7 @@ let Home = () => {
                         <div className="headerRight">
                             <span className="more">+更多>></span>
                         </div>
-                    </header>
+                    </header> */}
                     <section className="newsContainer">
                         <img src={require('../../access/index_r5_c11.jpeg')} className="" alt="" />
                         <section className="nav-box">
@@ -171,7 +171,7 @@ let Home = () => {
                 </article>
             </section>
             {/* 当代名家 */}
-            <section className="mingjia">
+            <section className="mingjia bordered">
                 <header className="header">
                     <div className="headerLeft">
                         <span className="block"></span>
@@ -342,7 +342,7 @@ let Home = () => {
                         </p>
                     </section>
                 </article>
-                <article className="links bordered">
+                <article className="active bordered">
                     <header className="header">
                         <div className="headerLeft">
                             <span className="block"></span>
@@ -407,7 +407,7 @@ let Home = () => {
                 </article>
             </section>
             {/* widget */}
-            <section className="mingjia">
+            <section className="mingjia bordered">
                 <header className="header">
                     <div className="headerLeft">
                         <span className="block"></span>

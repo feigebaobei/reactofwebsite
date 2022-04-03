@@ -2,6 +2,7 @@
 // import stylesAnimation from './widgetScrollBox.less'
 // import stylesScss from './first.scss';
 import './first.scss';
+import {useNavigate} from 'react-router-dom'
 
 let {log} = console;
 
@@ -9,6 +10,10 @@ let {log} = console;
 // log('stylesScss', stylesScss)
 
 let Home = () => {
+    let navigate = useNavigate();
+    let linkClickHandler = () => {
+        navigate('/query')
+    }
     return (
     <div className="main-box">
         <main className="main">
@@ -160,12 +165,12 @@ let Home = () => {
                     <section className="newsContainer">
                         <img src={require('../../access/index_r5_c11.jpeg')} className="" alt="" />
                         <section className="nav-box">
-                            <div>级位查询</div>
-                            <div>会员查询</div>
-                            <div>段位查询</div>
-                            <div>教练查询</div>
-                            <div>裁判查询</div>
-                            <div>考评员查询</div>
+                            <div onClick={linkClickHandler}>级位查询</div>
+                            <div onClick={linkClickHandler}>会员查询</div>
+                            <div onClick={linkClickHandler}>段位查询</div>
+                            <div onClick={linkClickHandler}>教练查询</div>
+                            <div onClick={linkClickHandler}>裁判查询</div>
+                            <div onClick={linkClickHandler}>考评员查询</div>
                         </section>
                     </section>
                 </article>

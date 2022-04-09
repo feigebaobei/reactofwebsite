@@ -2,7 +2,9 @@ let data = {
     10: [
         {
             label: '武术中心关于征集中国武术散打队、中国武术套路队2019—2021年赞助商的公告',
-            link: 'http://wushudwz.com/newsshow.asp?id=1336',
+            // link: 'http://wushudwz.com/newsshow.asp?id=1336',
+            // link: 'http://wushudwz.com/newsshow.asp?id=1336',
+            contentId: '1336',
             dateStr: '2019/8/21 10:27:57'
         },
         {

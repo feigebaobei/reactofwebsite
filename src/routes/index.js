@@ -1,5 +1,6 @@
 import Home from '../pages/Home/index.js'
 import NewsList from '../pages/NewsList/index.js'
+import Content from '../pages/Content/index.js'
 import Query from '../pages/Query/index.js'
 import LevelCert from '../pages/Query/LevelCert'
 import Login from '../pages/Login/index.js'
@@ -17,6 +18,12 @@ let routeList = [
         path: '/newsList',
         exact: true,
         component: () => <NewsList/>,
+        protected: null
+    },
+    {
+        path: '/content',
+        exact: true,
+        component: () => <Content/>,
         protected: null
     },
     {

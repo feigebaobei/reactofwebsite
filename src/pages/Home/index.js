@@ -1,6 +1,9 @@
 // import styles from './index.module.css';
 // import stylesAnimation from './widgetScrollBox.less'
 // import stylesScss from './first.scss';
+import Header from '../../components/Header'
+import Banner from '../../components/Banner'
+import Footer from '../../components/Footer'
 import './first.scss';
 import {useNavigate} from 'react-router-dom'
 
@@ -14,15 +17,20 @@ let Home = () => {
     let linkClickHandler = () => {
         navigate('/query')
     }
+    let moreClickHandler = (n) => {
+        navigate('/newsList', {
+            state: {id: n},
+            replace: false
+        })
+    }
     return (
     <div className="main-box">
         <main className="main">
             {/* header */}
-            <header>
-                <img src={require('../../access/index_r1_c1.jpeg')} className="headerImg" alt="img" />
-            </header>
+            <Header></Header>
             {/* banner */}
-            <div className="banner"></div>
+            {/* <div className="banner"></div> */}
+            <Banner></Banner>
             {/* first */}
             <section className="firstBox">
                 <article className="notice bordered">
@@ -33,7 +41,7 @@ let Home = () => {
                             <span className="grey">Notice</span>
                         </div>
                         <div className="headerRight">
-                            <span className="more">+更多>></span>
+                            <span className="more" onClick={() => moreClickHandler(10)}>+更多>></span>
                         </div>
                     </header>
                     <section className="newsContainer">
@@ -96,7 +104,7 @@ let Home = () => {
                             <span className="grey">NEWS</span>
                         </div>
                         <div className="headerRight">
-                            <span className="more">+更多>></span>
+                            <span className="more" onClick={() => moreClickHandler(20)}>+更多>></span>
                         </div>
                     </header>
                     <section className="newsContainer">
@@ -487,11 +495,12 @@ let Home = () => {
             </section>
             {/* 友情链接 不要 */}
             {/* footer */}
-            <footer className="homefooter">
+            {/* <footer className="homefooter">
                 <p>版权所有  COPYRIGHT  2005-2019 武术段位推广中心</p>
                 <p>中国最权威的武术证书认证官网-中国武术协会证书认证中心</p>
                 <p>提供段位查询、级位查询、教练查询等武术类相关的证书查询服务，并提供国内外及协会相关新闻资讯</p>
-            </footer>
+            </footer> */}
+            <Footer></Footer>
         </main>
     </div>)
 }

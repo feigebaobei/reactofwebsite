@@ -1,0 +1,16 @@
+.pages {
+    display: flex;
+    justify-content: space-between;
+    .left {}
+    .right {
+        .input {
+            border: 1px solid #ccc;
+            width: 30px;
+            margin: 0 5px;
+        }
+        button {
+            margin-left: 5px;
+        }
+    }
+}
+

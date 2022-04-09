@@ -2,6 +2,7 @@ import {useState, useRef} from 'react'
 import {message} from 'antd'
 import api from '../../utils/api'
 // import './index.css'
+import './index.scss'
 import { useSelector } from 'react-redux'
 
 let {log} = console

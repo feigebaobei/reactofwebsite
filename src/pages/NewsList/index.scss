@@ -5,4 +5,39 @@
     width: 1100px;
     margin: 0 auto;
     background-color: white;
+    .news-box {
+        padding: 0px 40px;
+        .news-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 24px 0;
+            font-size: 12px;
+            color: #000;
+            .left {
+                display: flex;
+                align-items: center;
+                .news-icon {
+                    margin-right: 12px;
+                    width: 6px;
+                    height: 5px;
+                }
+                .link {
+                    cursor: pointer;
+                }
+            }
+            .right {
+                margin-right: 20px;
+                color: #454545;
+            }
+        }
+    }
+    .page-box {
+        padding: 0 40px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .line {
+        border-bottom: 1px solid #ccc;
+    }
 }

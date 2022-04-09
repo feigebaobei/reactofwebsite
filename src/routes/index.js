@@ -1,6 +1,6 @@
 import Home from '../pages/Home/index.js'
 import NewsList from '../pages/NewsList/index.js'
-import Content from '../pages/Content/index.js'
+import Contents from '../pages/Contents/index.js'
 import Query from '../pages/Query/index.js'
 import LevelCert from '../pages/Query/LevelCert'
 import Login from '../pages/Login/index.js'
@@ -21,9 +21,9 @@ let routeList = [
         protected: null
     },
     {
-        path: '/content',
+        path: '/contents',
         exact: true,
-        component: () => <Content/>,
+        component: () => <Contents/>,
         protected: null
     },
     {

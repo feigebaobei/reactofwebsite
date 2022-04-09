@@ -17,9 +17,10 @@ let NewsList = () => {
 
     let labelClickHandler = ({contentId}) => {
         // clog()
-        navigate('/content', {
+        navigate('/contents', {
             state: {
-                contentId
+                contentId,
+                newsId: location.state.id // 新闻板块的id
             },
             replace: false
         })

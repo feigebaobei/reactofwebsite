@@ -14,8 +14,8 @@ let Content = () => {
     // let Temp = require('./1336.js').default
     let Cont = require(`./${location.state.contentId}.js`).default
     clog(Cont)
-    clog(data[location.state.newsId])
-    let contItem = data[location.state.newsId].find(item => item.contentId === location.state.contentId)
+    clog(data[location.state.blockId])
+    let contItem = data[location.state.blockId].find(item => item.contentId === location.state.contentId)
     return (<div className="cont-bg">
         <main className="cont">
             <Header/>

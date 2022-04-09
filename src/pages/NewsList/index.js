@@ -20,13 +20,13 @@ let NewsList = () => {
         navigate('/contents', {
             state: {
                 contentId,
-                newsId: location.state.id // 新闻板块的id
+                blockId: location.state.blockId // 新闻板块的id
             },
             replace: false
         })
     }
     
-    let list = (data[location.state.id] || [])
+    let list = (data[location.state.blockId] || [])
     return (<div className="cont-bg">
         <main className="cont">
             <Header></Header>

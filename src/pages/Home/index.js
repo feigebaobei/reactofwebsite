@@ -1,14 +1,11 @@
-// import styles from './index.module.css';
-// import stylesAnimation from './widgetScrollBox.less'
-// import stylesScss from './first.scss';
 import Header from '../../components/Header'
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
-// import './first.scss';
 import styles from './first.module.scss';
 import {useNavigate} from 'react-router-dom'
+import data from '../NewsList/data.js'
 
-// let {log} = console;
+let clog = console.log;
 
 // log('styles', styles)
 // log('stylesScss', stylesScss)
@@ -20,7 +17,16 @@ let Home = () => {
     }
     let moreClickHandler = (n) => {
         navigate('/newsList', {
-            state: {id: n},
+            state: {blockId: n},
+            replace: false
+        })
+    }
+    let newsItemClickHandler = (newsBlock, newsItem) => {
+        navigate('/contents', {
+            state: {
+                blockId: newsBlock,
+                contentId: newsItem.contentId,
+            },
             replace: false
         })
     }
@@ -38,18 +44,27 @@ let Home = () => {
                             <span className={styles.grey}>Notice</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more} onClick={() => moreClickHandler(10)}>+更多>></span>
+                            <span className={styles.more} onClick={() => moreClickHandler(10)}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
-                        <p className={styles.newsP}>
+                        {data[10].slice(0, 7).map((item, index) => {
+                            return (<p className={styles.newsP} key={index}>
+                                <span className={styles.newsPLeft}>
+                                    <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                                    <span className={styles.containerLinks} onClick={() => newsItemClickHandler(10, item)}>{item.linkTitle}</span>
+                                </span>
+                                <span>{`${new Date(item.dateNum).getMonth() + 1}-${new Date(item.dateNum).getDate()}`}</span>
+                            </p>)
+                        })}
+                        {/* <p className={styles.newsP}>
                             <span className={styles.newsPLeft}>
                                 <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>武术中心关于征集中国武术散…</span>
+                                <span className={styles.containerLinks} onClick={() => newsItemClickHandler(10, )}>武术中心关于征集中国武术散…</span>
                             </span>
                             <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
+                        </p> */}
+                        {/* <p className={styles.newsP}>
                             <span className={styles.newsPLeft}>
                                 <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
                                 <span className={styles.containerLinks}>2019世界武术日全球金奖…</span>
@@ -90,7 +105,7 @@ let Home = () => {
                                 <span className={styles.containerLinks}>第四届马来西亚国际武术节</span>
                             </span>
                             <span>08-21</span>
-                        </p>
+                        </p> */}
                     </section>
                 </article>
                 <article className={`${styles.news} ${styles.bordered}`}>
@@ -101,7 +116,7 @@ let Home = () => {
                             <span className={styles.grey}>NEWS</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more} onClick={() => moreClickHandler(20)}>+更多>></span>
+                            <span className={styles.more} onClick={() => moreClickHandler(20)}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
@@ -179,7 +194,7 @@ let Home = () => {
                         <span className={styles.grey}>History famous</span>
                     </div>
                     <div className={styles.headerRight}>
-                        <span className={styles.more}>+更多>></span>
+                        <span className={styles.more}>+更多&gt;&gt;</span>
                     </div>
                 </header>
                 <section className={styles.imgScrollBoxBox}>
@@ -259,7 +274,7 @@ let Home = () => {
                             <span className={styles.grey}>Member center</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more}>+更多>></span>
+                            <span className={styles.more}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
@@ -287,7 +302,7 @@ let Home = () => {
                             <span className={styles.grey}>Activity reports</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more}>+更多>></span>
+                            <span className={styles.more}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
@@ -350,7 +365,7 @@ let Home = () => {
                             <span className={styles.grey}>Activity reports</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more}>+更多>></span>
+                            <span className={styles.more}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
@@ -415,7 +430,7 @@ let Home = () => {
                         <span className={styles.grey}>badge display</span>
                     </div>
                     <div className={styles.headerRight}>
-                        <span className={styles.more}>+更多>></span>
+                        <span className={styles.more}>+更多&gt;&gt;</span>
                     </div>
                 </header>
                 <section className={styles.imgScrollBoxBox}>
@@ -488,7 +503,7 @@ let Home = () => {
                         <span className={styles.grey}>Link</span>
                     </div>
                     <div className={styles.headerRight}>
-                        <span className={styles.more}>+更多>></span>
+                        <span className={styles.more}>+更多&gt;&gt;</span>
                     </div>
                 </header>
                 <section className={styles.container}>

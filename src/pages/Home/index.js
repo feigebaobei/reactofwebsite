@@ -57,55 +57,6 @@ let Home = () => {
                                 <span>{`${new Date(item.dateNum).getMonth() + 1}-${new Date(item.dateNum).getDate()}`}</span>
                             </p>)
                         })}
-                        {/* <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks} onClick={() => newsItemClickHandler(10, )}>武术中心关于征集中国武术散…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p> */}
-                        {/* <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>2019世界武术日全球金奖…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>体育总局武术中心关于举办</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>套路世界杯进入”东京“时…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>2018“佛山高新区杯”国…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>中国武术段位的分类</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>第四届马来西亚国际武术节</span>
-                            </span>
-                            <span>08-21</span>
-                        </p> */}
                     </section>
                 </article>
                 <article className={`${styles.news} ${styles.bordered}`}>
@@ -120,7 +71,16 @@ let Home = () => {
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
-                        <p className={styles.newsP}>
+                        {data[20].slice(0, 7).map((item, index) => {
+                            return (<p className={styles.newsP} key={index}>
+                                <span className={styles.newsPLeft}>
+                                    <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                                    <span className={styles.containerLinks} onClick={() => newsItemClickHandler(20, item)}>{item.linkTitle}</span>
+                                </span>
+                                <span>{`${new Date(item.dateNum).getMonth() + 1}-${new Date(item.dateNum).getDate()}`}</span>
+                            </p>)
+                        })}
+                        {/* <p className={styles.newsP}>
                             <span className={styles.newsPLeft}>
                                 <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
                                 <span className={styles.containerLinks}>第二届全国青年运动会武术套路比赛（社会俱乐部组）7…</span>
@@ -168,7 +128,7 @@ let Home = () => {
                                 <span className={styles.containerLinks}>2018马来西亚国际武术节比赛规程</span>
                             </span>
                             <span>08-21</span>
-                        </p>
+                        </p> */}
                     </section>
                 </article>
                 <article className={`${styles.links} ${styles.bordered}`}>

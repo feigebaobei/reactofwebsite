@@ -3,6 +3,7 @@ import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import styles from './first.module.scss';
 import {useNavigate} from 'react-router-dom'
+// import data, {mingjia as mingjiaData} from '../NewsList/data.js'
 import data from '../NewsList/data.js'
 
 // let clog = console.log;
@@ -30,6 +31,11 @@ let Home = () => {
             replace: false
         })
     }
+    
+    let mingjiaImgList = data[30].filter(item => {
+        // return ['1359', '1358', '1357', '1356', '1355', '1354', '1353', '1352', '1351', '1350',].includes(item.contentId)
+        return item.imgName
+    })
     return (
     <div className={styles.mainBox}>
         <main className={styles.main}>
@@ -80,55 +86,6 @@ let Home = () => {
                                 <span>{`${new Date(item.dateNum).getMonth() + 1}-${new Date(item.dateNum).getDate()}`}</span>
                             </p>)
                         })}
-                        {/* <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>第二届全国青年运动会武术套路比赛（社会俱乐部组）7…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>2019年全国太极拳健康工程系列活动启动仪式在河南…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>2019年郑州国际武术套路邀请赛暨第二届全国武术非…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>中国武术协会换届会议</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>2018年第四届马来西亚国际武术节盛大闭幕</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>弹腿传统武术精英赛在临西举…</span>
-                            </span>
-                            <span>08-21</span>
-                        </p>
-                        <p className={styles.newsP}>
-                            <span className={styles.newsPLeft}>
-                                <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
-                                <span className={styles.containerLinks}>2018马来西亚国际武术节比赛规程</span>
-                            </span>
-                            <span>08-21</span>
-                        </p> */}
                     </section>
                 </article>
                 <article className={`${styles.links} ${styles.bordered}`}>
@@ -154,73 +111,101 @@ let Home = () => {
                         <span className={styles.grey}>History famous</span>
                     </div>
                     <div className={styles.headerRight}>
-                        <span className={styles.more}>+更多&gt;&gt;</span>
+                        <span className={styles.more} onClick={() => moreClickHandler(30)}>+更多&gt;&gt;</span>
                     </div>
                 </header>
                 <section className={styles.imgScrollBoxBox}>
                     <div className={styles.imgScrollBox}>
                         {/* 需要设置链接 */}
-                        <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821112124202420.jpeg')} alt="" />
+                        {[...mingjiaImgList, ...mingjiaImgList].map((item, index) => {
+                            return (
+                                <div className={styles.imgBox} key={index}>
+                                    <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(30, item)}
+                                    src={require(`../../access/${item.name}`)} alt="" />
+                                </div>
+                            )
+                        })}
+                        {/* <div className={styles.imgBox}>
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821112124202420.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821112052295229.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821112052295229.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821111986628662.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821111986628662.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821111737403740.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821111737403740.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104622262226.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104622262226.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104550055005.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104550055005.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/2019082110440632632.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/2019082110440632632.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104377717771.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104377717771.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104287898789.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104287898789.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104078787878.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104078787878.jpeg')} alt="" />
                         </div>
 
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821112124202420.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821112124202420.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821112052295229.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821112052295229.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821111986628662.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821111986628662.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821111737403740.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821111737403740.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104622262226.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104622262226.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104550055005.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104550055005.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/2019082110440632632.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/2019082110440632632.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104377717771.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104377717771.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104287898789.jpeg')} alt="" />
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104287898789.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
-                            <img className={styles.mingjiaPic} src={require('../../access/20190821104078787878.jpeg')} alt="" />
-                        </div>
+                            <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(20, item)}
+                             src={require('../../access/20190821104078787878.jpeg')} alt="" />
+                        </div> */}
                     </div>
                 </section>
             </section>
@@ -234,11 +219,20 @@ let Home = () => {
                             <span className={styles.grey}>Member center</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more}>+更多&gt;&gt;</span>
+                            <span className={styles.more} onClick={() => moreClickHandler(40)}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
-                        <p className={styles.newsP}>
+                        {data[40].slice(0, 7).map((item, index) => {
+                            return (<p className={styles.newsP} key={index}>
+                                <span className={styles.newsPLeft}>
+                                    <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                                    <span className={styles.containerLinks} onClick={() => newsItemClickHandler(40, item)}>{item.linkTitle}</span>
+                                </span>
+                                <span>{`${new Date(item.dateNum).getMonth() + 1}-${new Date(item.dateNum).getDate()}`}</span>
+                            </p>)
+                        })}
+                        {/* <p className={styles.newsP}>
                             <span className={styles.newsPLeft}>
                                 <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
                                 <span className={styles.containerLinks}>孙加记</span>
@@ -251,7 +245,7 @@ let Home = () => {
                                 <span className={styles.containerLinks}>乔红亮</span>
                             </span>
                             <span>08-21</span>
-                        </p>
+                        </p> */}
                     </section>
                 </article>
                 <article className={`${styles.news} ${styles.bordered}`}>
@@ -262,11 +256,20 @@ let Home = () => {
                             <span className={styles.grey}>Activity reports</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more}>+更多&gt;&gt;</span>
+                            <span className={styles.more} onClick={() => moreClickHandler(50)}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
-                        <p className={styles.newsP}>
+                        {data[50].slice(0, 7).map((item, index) => {
+                            return (<p className={styles.newsP} key={index}>
+                                <span className={styles.newsPLeft}>
+                                    <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                                    <span className={styles.containerLinks} onClick={() => newsItemClickHandler(50, item)}>{item.linkTitle}</span>
+                                </span>
+                                <span>{`${new Date(item.dateNum).getMonth() + 1}-${new Date(item.dateNum).getDate()}`}</span>
+                            </p>)
+                        })}
+                        {/* <p className={styles.newsP}>
                             <span className={styles.newsPLeft}>
                                 <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
                                 <span className={styles.containerLinks}>究竟什么是抻筋拔骨，古拳谱里的描述或许并不准确</span>
@@ -314,7 +317,7 @@ let Home = () => {
                                 <span className={styles.containerLinks}>周伟良谈传统武术的传承方式</span>
                             </span>
                             <span>08-21</span>
-                        </p>
+                        </p> */}
                     </section>
                 </article>
                 <article className={`${styles.active} ${styles.bordered}`}>
@@ -325,11 +328,20 @@ let Home = () => {
                             <span className={styles.grey}>Activity reports</span>
                         </div>
                         <div className={styles.headerRight}>
-                            <span className={styles.more}>+更多&gt;&gt;</span>
+                            <span className={styles.more} onClick={() => moreClickHandler(60)}>+更多&gt;&gt;</span>
                         </div>
                     </header>
                     <section className={styles.newsContainer}>
-                        <p className={styles.newsP}>
+                        {data[60].slice(0, 7).map((item, index) => {
+                            return (<p className={styles.newsP} key={index}>
+                                <span className={styles.newsPLeft}>
+                                    <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
+                                    <span className={styles.containerLinks} onClick={() => newsItemClickHandler(60, item)}>{item.linkTitle}</span>
+                                </span>
+                                <span>{`${new Date(item.dateNum).getMonth() + 1}-${new Date(item.dateNum).getDate()}`}</span>
+                            </p>)
+                        })}
+                        {/* <p className={styles.newsP}>
                             <span className={styles.newsPLeft}>
                                 <img src={require('../../access/newbt.jpeg')} className={styles.newsIcon} alt="" />
                                 <span className={styles.containerLinks}>2019年全国武术散打冠军赛在渝开幕</span>
@@ -377,7 +389,7 @@ let Home = () => {
                                 <span className={styles.containerLinks}>太极拳进机关”公益活动助力活力机关建设</span>
                             </span>
                             <span>08-21</span>
-                        </p>
+                        </p> */}
                     </section>
                 </article>
             </section>
@@ -390,13 +402,21 @@ let Home = () => {
                         <span className={styles.grey}>badge display</span>
                     </div>
                     <div className={styles.headerRight}>
-                        <span className={styles.more}>+更多&gt;&gt;</span>
+                        <span className={styles.more} onClick={() => moreClickHandler(70)}>+更多&gt;&gt;</span>
                     </div>
                 </header>
                 <section className={styles.imgScrollBoxBox}>
                     <div className={styles.widgetScrollBox}>
                         {/* 需要设置链接 */}
-                        <div className={styles.imgBox}>
+                        {[...mingjiaImgList, ...mingjiaImgList].map((item, index) => {
+                            return (
+                                <div className={styles.imgBox} key={index}>
+                                    <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(70, item)}
+                                    src={require(`../../access/${item.name}`)} alt="" />
+                                </div>
+                            )
+                        })}
+                        {/* <div className={styles.imgBox}>
                             <img className={styles.mingjiaPic} src={require('../../access/20190821114713961396.jpeg')} alt="" />
                         </div>
                         <div className={styles.imgBox}>
@@ -450,7 +470,7 @@ let Home = () => {
                         </div>
                         <div className={styles.imgBox}>
                             <img className={styles.mingjiaPic} src={require('../../access/20190821114990179017.jpeg')} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </section>
             </section>

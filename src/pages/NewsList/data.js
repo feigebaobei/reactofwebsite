@@ -59,7 +59,7 @@ let data = {
             dateStr: '2019/8/21 10:20:39'
         },
     ],
-    20: [
+    20: [ // 协会新闻
         {
             label: '第二届全国青年运动会武术套路比赛（社会俱乐部组）7月14日开赛',
             contentId: '1347',
@@ -137,7 +137,274 @@ let data = {
             dateNum: 1566354890000,
             dateStr: '2019/8/21 10:29:13'
         },
-    ]
+    ], 
+    30: [ // 当代名家
+        {
+            label: "全能冠军-赵长军",
+            imgName: '20190821112124202420.jpeg',
+            contentId: '1359',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:21:39'
+        },
+        {
+            label: "明星武术家-吴彬",
+            imgName: '20190821112052295229.jpeg',
+            contentId: '1358',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:20:43'
+        },
+        {
+            label: "杨氏拳传人-杨文玺",
+            imgName: '20190821111986628662.jpeg',
+            contentId: '1357',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:19:15'
+        },
+        {
+            label: "八卦掌-刘敬儒",
+            imgName: '20190821111737403740.jpeg',
+            contentId: '1356',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:18:14'
+        },
+        {
+            label: "孙式太极拳-孙婉容",
+            imgName: '20190821104622262226.jpeg',
+            contentId: '1355',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:47:12'
+        },
+        {
+            label: "螳螂拳-于海",
+            imgName: '20190821104550055005.jpeg',
+            contentId: '1354',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:45:58'
+        },
+        {
+            label: "吴式太极拳-康戈武",
+            imgName: '2019082110440632632.jpeg',
+            contentId: '1353',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:45:14'
+        },
+        {
+            label: "陈式太极拳-陈正雷",
+            imgName: '20190821104377717771.jpeg',
+            contentId: '1352',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:44:09'
+        },
+        {
+            label: "杨式太极拳-曾乃梁",
+            imgName: '20190821104287898789.jpeg',
+            contentId: '1351',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:43:09'
+        },
+        {
+            label: "武式太极拳-曾于久",
+            imgName: '20190821104078787878.jpeg',
+            contentId: '1350',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:42:05'
+        },
+        {
+            label: "长拳-江百龙",
+            imgName: '',
+            contentId: '1349',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:40:25'
+        },
+        {
+            label: "八极拳-门惠丰",
+            imgName: '',
+            contentId: '1348',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 10:39:17'
+        },
+    ],
+    40: [
+        {
+            label: "孙加记",
+            imgName: '',
+            contentId: '1361',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:24:19'
+        },
+        {
+            label: "乔红亮",
+            imgName: '',
+            contentId: '1360',
+            linkTitle: '', 
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:23:14'
+        }
+    ],
+    50: [],
+    60: [],
+    70: [
+        {
+            label: "徽章",
+            imgName: '20190821114713961396.jpeg',
+            contentId: '1383',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:49:27'
+        },
+        {
+            label: "徽章",
+            imgName: '20190821114820142014.jpeg',
+            contentId: '1384',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:49:17'
+        },
+        {
+            label: "徽章",
+            imgName: '20190821114713711371.jpeg',
+            contentId: '1385',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:49:06'
+        },
+        {
+            label: "徽章",
+            imgName: '2019082111480282282.jpeg',
+            contentId: '',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:48:54'
+        },
+        {
+            label: "徽章",
+            imgName: '20190821114875897589.jpeg',
+            contentId: '',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:48:42'
+        },
+        {
+            label: "徽章",
+            imgName: '20190821114842884288.jpeg',
+            contentId: '',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:48:31'
+        },
+        {
+            label: "徽章",
+            imgName: '20190821114880428042.jpeg',
+            contentId: '',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:48:21'
+        },
+        {
+            label: "徽章",
+            imgName: '2019082111490719719.jpeg',
+            contentId: '',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:48:10'
+        },
+        {
+            label: "徽章",
+            imgName: '20190821114990179017.jpeg',
+            contentId: '',
+            linkTitle: '',
+            dateNum: 1566354890000,
+            dateStr: '2019/8/21 11:47:52'
+        },
+    ],
 }
+let mingjia = [
+    {
+        name: '20190821112124202420',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821112052295229',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821111986628662',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821111737403740',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821104622262226',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821104550055005',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '2019082110440632632',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821104377717771',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821104287898789',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+    {
+        name: '20190821104078787878',
+        contentId: '',
+        linkTitle: '',
+        dateNum: 1566354890000,
+        dateStr: '2019/8/21 10:39'
+    },
+]
 
 export default data
+export {
+    mingjia
+}

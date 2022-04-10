@@ -5,7 +5,7 @@ import styles from './first.module.scss';
 import {useNavigate} from 'react-router-dom'
 import data from '../NewsList/data.js'
 
-let clog = console.log;
+// let clog = console.log;
 
 // log('styles', styles)
 // log('stylesScss', stylesScss)

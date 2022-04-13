@@ -121,7 +121,7 @@ let Home = () => {
                             return (
                                 <div className={styles.imgBox} key={index}>
                                     <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(30, item)}
-                                    src={require(`../../access/${item.name}`)} alt="" />
+                                    src={require(`../../access/${item.imgName}`)} alt="" />
                                 </div>
                             )
                         })}
@@ -412,7 +412,7 @@ let Home = () => {
                             return (
                                 <div className={styles.imgBox} key={index}>
                                     <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(70, item)}
-                                    src={require(`../../access/${item.name}`)} alt="" />
+                                    src={require(`../../access/${item.imgName}`)} alt="" />
                                 </div>
                             )
                         })}

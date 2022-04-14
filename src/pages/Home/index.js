@@ -408,7 +408,7 @@ let Home = () => {
                 <section className={styles.imgScrollBoxBox}>
                     <div className={styles.widgetScrollBox}>
                         {/* 需要设置链接 */}
-                        {[...mingjiaImgList, ...mingjiaImgList].map((item, index) => {
+                        {[...data[70], ...data[70]].map((item, index) => {
                             return (
                                 <div className={styles.imgBox} key={index}>
                                     <img className={styles.mingjiaPic} onClick={() => newsItemClickHandler(70, item)}

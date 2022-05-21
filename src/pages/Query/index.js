@@ -28,8 +28,8 @@ let buttonList = [
 
 function Query() {
   let [buttonActive, setButtonActive] = useState('10')
-  // let [number, setNumber] = useState('')
-  let [number, setNumber] = useState('110101199003077774') // for test
+  let [number, setNumber] = useState('')
+  // let [number, setNumber] = useState('110101199003077774') // for test
   let [name, setName] = useState('')
   let nameRef = useRef()
   let numberRef = useRef()

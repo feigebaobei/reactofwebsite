@@ -2,18 +2,18 @@
 import {useState,
   useRef
 } from 'react'
-import api from '../../utils/api'
+// import api from '../../utils/api'
 import Footer from '../../components/Footer'
-import {useDispatch} from 'react-redux'
-import {levelCertUrl} from '../../store/actions'
+// import {useDispatch} from 'react-redux'
+// import {levelCertUrl} from '../../store/actions'
 import {useNavigate} from 'react-router-dom'
-import config from '../../config'
+// import config from '../../config'
 import './index.scss'
 
-import {
-  // Button,
-  message
-} from 'antd'
+// import {
+//   // Button,
+//   message
+// } from 'antd'
 
 let buttonList = [
   { label: '级位证', value: '10'},
@@ -24,15 +24,16 @@ let buttonList = [
   { label: '考评员资格', value: '60'},
 ]
 
-let {log} = console
+// let {log} = console
 
 function Query() {
   let [buttonActive, setButtonActive] = useState('10')
-  let [number, setNumber] = useState('')
+  // let [number, setNumber] = useState('')
+  let [number, setNumber] = useState('110101199003077774') // for test
   let [name, setName] = useState('')
   let nameRef = useRef()
   let numberRef = useRef()
-  let dispatch = useDispatch()
+  // let dispatch = useDispatch()
   let navigate = useNavigate();
 
 
@@ -42,23 +43,32 @@ function Query() {
   let queryClickHandler = (e) => {
     e.preventDefault()
     e.stopPropagation()
-    // log('queryClickHandler')
-    api.getLevelCert({
-      // idCardOrName => idCardOrCertNumber
-      idCardOrCertNumber: number
-    }).then(res => {
-      // log('then', res)
-      // 在store中保存levelCertUrl
-      // dispatch(token(res.data.token))
-      if (!res.data.code) {
-        dispatch(levelCertUrl(`//${config.serveHost}:${config.servePort}/${res.data.data}`))
-        navigate('/levelCert')
-      } else {
-        message.error(res.data.message)
-      }
-    }).catch(err => {
-      log('catch', err)
+
+    navigate('/levelCert', {
+      state: {idCardOrCertNumber: number},
+      replace: false
     })
+    // log('queryClickHandler')
+    // api.getLevelCert({
+    //   // idCardOrName => idCardOrCertNumber
+    //   idCardOrCertNumber: number
+    // }).then(res => {
+    //   // log('then', res)
+    //   // 在store中保存levelCertUrl
+    //   // dispatch(token(res.data.token))
+    //   if (!res.data.code) {
+    //     // dispatch(levelCertUrl(`//${config.serveHost}:${config.servePort}/${res.data.data}`))
+    //     // navigate('/levelCert')
+    //     navigate('/levelCert', {
+    //       state: {idCardOrCertNumber: number},
+    //       replace: false
+    //     })
+    //   } else {
+    //     message.error(res.data.message)
+    //   }
+    // }).catch(err => {
+    //   log('catch', err)
+    // })
   }
   let resetClickHandler = (e) => {
     // e.preventDefault()

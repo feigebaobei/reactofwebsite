@@ -1,0 +1,70 @@
+.levelCertBox {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.bannerImg {
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.path {
+    color: grey;
+}
+.pathItem {
+    color: #2a2a2a;
+}
+.homePage {
+    cursor: pointer;
+}
+.homePage:hover {
+    color: #f60;
+}
+
+.hasPic {
+    text-align: center;
+}
+.hasPicImg {
+    width: 100%;
+}
+
+.noPic {
+    padding: 100px;
+    text-align: center;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    td {
+        border: 1px solid #2a2a2a;
+        padding: 0px;
+    }
+}
+.footerP {
+    margin: 20px 0;
+    span {
+        margin-right: 10px;
+    }
+}
+.footer {
+    position: relative;
+    padding: 0;
+    background-color: #ccc;
+    img {
+        position: absolute;
+        width: 50px;
+        top: 50%;
+        left: 70px;
+        transform: translate(-50%, -50%);
+    }
+    p {
+        margin: 0 0 14px 0;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+    }
+    p:last-child {
+        margin: 0;
+    }
+}

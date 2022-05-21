@@ -16,16 +16,17 @@ let token = (nr = '') => {
         payload: nr
     }
 }
-let levelCertUrl = (nr = '') => {
-    return {
-        type: 'resetLevelCertUrl',
-        payload: nr
-    }
-}
+// 不用它了。
+// let levelCertUrl = (nr = '') => {
+//     return {
+//         type: 'resetLevelCertUrl',
+//         payload: nr
+//     }
+// }
 
 export {
     increment,
     decrement,
     token,
-    levelCertUrl
+    // levelCertUrl
 }

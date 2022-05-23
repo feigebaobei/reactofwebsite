@@ -38,7 +38,7 @@
     border-collapse: collapse;
     td {
         border: 1px solid #2a2a2a;
-        padding: 0px;
+        padding: 2px;
     }
 }
 .footerP {
@@ -67,4 +67,10 @@
     p:last-child {
         margin: 0;
     }
+}
+.bold {
+    font-weight: bold;
+}
+.right {
+    text-align: right;
 }

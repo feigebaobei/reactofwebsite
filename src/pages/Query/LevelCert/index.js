@@ -66,35 +66,35 @@ function LevelCert() {
         <table className={styles.table}>
           <tbody>
             <tr>
-              <td>姓名</td>
+              <td className={`${styles.bold} ${styles.right}`}>姓名</td>
               <td>{data.name}</td>
-              <td>身份证号</td>
+              <td className={`${styles.bold} ${styles.right}`}>身份证号</td>
               <td>{data.idCard}</td>
               <td rowSpan="5">
                 <img src={data.photoPath} alt="照片" />
               </td>
             </tr>
             <tr>
-              <td>性别</td>
+              <td className={`${styles.bold} ${styles.right}`}>性别</td>
               <td>{data.gender}</td>
-              <td>出生年月</td>
+              <td className={`${styles.bold} ${styles.right}`}>出生年月</td>
               <td>{data.birthday}</td>
               {/* <td>{`${data.idCard.slice(6, 10)}-${data.idCard.slice(10, 12)}-${data.idCard.slice(12, 14)}`}</td> */}
             </tr>
             <tr>
-              <td>项目资格</td>
+              <td className={`${styles.bold} ${styles.right}`}>项目资格</td>
               <td>{data.projectGrade}</td>
-              <td>项目</td>
+              <td className={`${styles.bold} ${styles.right}`}>项目</td>
               <td>{data.project}</td>
             </tr>
             <tr>
-              <td>审批单位</td>
+              <td className={`${styles.bold} ${styles.right}`}>审批单位</td>
               <td>{data.approvalEnterprises}</td>
-              <td>审批时间</td>
+              <td className={`${styles.bold} ${styles.right}`}>审批时间</td>
               <td>{data.approvalDate}</td>
             </tr>
             <tr>
-              <td>证书编号</td>
+              <td className={`${styles.bold} ${styles.right}`}>证书编号</td>
               <td colSpan="3">{data.certNumber}</td>
             </tr>
           </tbody>

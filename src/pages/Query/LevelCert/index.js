@@ -70,7 +70,7 @@ function LevelCert() {
               <td>{data.name}</td>
               <td className={`${styles.bold} ${styles.right}`}>身份证号</td>
               <td>{data.idCard}</td>
-              <td rowSpan="5">
+              <td rowSpan="5" className={styles.center}>
                 <img src={data.photoPath} alt="照片" />
               </td>
             </tr>
